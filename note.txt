@@ -1,1 +1,16 @@
 # Digital-clock
+
+
+
+site link:     https://642e6c2d49aca963db6388da--lovely-chaja-4a598a.netlify.app/
+
+
+
+
+
+funtionality:
+
+
+this is a digital clock app that displays time in real time,
+first we declare a function called displayTime, then we  create a variable dateTime with the Date object assigned to it, this provides us with an object template for the clock, then we manipulate this object using the other variables
+that were declared, and if statement is used to indictae whether it is day time or night time, a set interval method is used to update the clock in real time.

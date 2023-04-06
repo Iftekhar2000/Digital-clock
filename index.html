@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Practice</title>
+</head>
+<body style="justify-content: center; align-items: center; display: flex; height: 100vh;">
+
+
+    <div class="clock" id='clock' style="display: flex; gap: 10px; border: 5px dotted black; margin: 10px;padding: 10px;" >
+        <div id="hours" style="font-size: x-large;">00</div>
+        <span>:</span>
+        <div id="minutes" style="font-size: x-large;">00</div>
+        <span>:</span>
+        <div id="seconds" style="font-size: x-large;">00</div>
+        <span id="session" style="font-size: x-large;"></span>
+    </div>
+
+    
+    <script>
+
+        function displayTime () {
+            var dateTime = new Date();
+            var hours = dateTime.getHours();
+            var minutes = dateTime.getMinutes();
+            var seconds = dateTime.getSeconds();
+            var session = document.getElementById("session");
+
+            
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+
+            if(hours>=12){
+                session.innerHTML = "PM";
+            } else{
+                session.innerHTML = "AM";
+            }
+        }
+
+        setInterval(displayTime, 10);
+
+
+    </script>
+
+
+</body>
+</html>
+
